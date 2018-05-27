@@ -1,3 +1,7 @@
+/**
+ * This is a doc comment.
+ */
 fn main() {
-    println!("Hello, world!");
+    // this is a comment
+    println!("Hello, RustBridge Paris!");
 }
