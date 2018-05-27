@@ -8,7 +8,20 @@ fn main() {
     let name: &'static str = "Fuchur";
     let age = 7;
     println!("{} is {} years old.", name, age);
-    println!("Someone else is {} years old.", add_fifty(age))
+    println!("Someone else is {} years old.", add_fifty(age));
+
+    let color = [255, 0, 255];
+    // debug printing (no normal debugging for an array)
+    println!("color array: {:?}", color);
+    // pretty printing (more helpful for nested structures)
+    println!("color: {:#?}", color);
+
+    let index = 9;
+    println!("The 10th element is {:?}", color.get(index));
+    if color.get(index) == None {
+        println!("The index is out of bounds!");
+    }
+    println!("The 10th element is {:?}", color[index]);
 }
 
 fn add_fifty(n: i32) -> i32 {

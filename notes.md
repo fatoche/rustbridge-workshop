@@ -18,9 +18,15 @@ Types
 - integers: default i32
 - floating-point numbers: default f64
 - if the compiler cannot determinate the exact type, it errors (only exception: numbers)
+- numbers can be written as `let num = 375u32` -> append the type to the number -> not really common, weird aesthetics
 - Strings "some string" vs. Char 'c'
 - size: different lengths, depending on the platform
 - just use the compiler to tell you which types to write in function/variable declarations! (yay, it's not yelling at us, it's helping :D )
+- containers
+	- array: fixed size, let color = [255, 0, 255], color[2]
+		- []-indexing panics with invalid indices
+		- .get() indexing returns None at runtime
+	- Vec<T>: variable size
 
 Printing
 -------
@@ -33,3 +39,7 @@ Functions
 --------
 - declarations are possible inside other functions
 - the result of the last statement (if it does not end with a semicolon) is automatically returned -> explicit return statement not required (but can be put there)
+
+Flow control
+-----------
+- match: exhaustive -> use _ for remaining cases
