@@ -25,7 +25,7 @@ Types
 - containers
 	- array: fixed size, let color = [255, 0, 255], color[2]
 		- []-indexing panics with invalid indices
-		- .get() indexing returns None at runtime
+		- .get() indexing returns None (Option) at runtime
 	- Vec<T>: variable size
 	- Tuples
 		- syntax sugar: tuple[2] vs tuple.2
@@ -58,6 +58,19 @@ Tests
 -----
 - use #[test] before the test function
 - ignore test: #[ignore]
+
+Error Handling
+--------------
+- Option
+	- Some(value) or None
+	- Option.unwrap() -> panics if option is None
+	- option.expect(my_message) -> panics with message my_message if option is None, nice if you are still learning to have a sensible error message
+	- option.unwrap_or_else() -> confusing way to avoid matching on option
+- Result
+	- Ok(value) or Err(error)
+	- use Result instead of exception handling
+- ? operator: lets errors bubble up
+	- can be used on an Option/Result in any function that also returns an Option/Result
 
 
 Issues
