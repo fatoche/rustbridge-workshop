@@ -91,6 +91,11 @@ Imports
 2. extern crate crate_name;
 3. use crate_name::Struct [as my_struct_name]; OR use crate_name::{Struct1, Struct2};
 
+- import different module: mod other_module -> other_module.rs has to be on the same level
+- import module from different subfolder:
+	- put a file mod.rs in subfolder
+	- in mod.rs: `use` the other files in the subfolder
+
 
 Issues
 -----
@@ -110,9 +115,17 @@ Crates
 	- collection of motivational messages
 - pick_one -> picks a random element from an array
 - python: flask -> minimal, easy web framework
+- handlebars -> templating language
 
 Server
 -----
 - new(callback)
 - callback is a closure that takes a request (stuff that we listen to) and an empty response that the server will fill
 - request has a method (GET or POST) and a URI
+- response has
+	- CONTEXT
+	- TEMPLATE
+		<html>
+			{x}
+			{y}
+		</html>
