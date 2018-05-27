@@ -54,6 +54,11 @@ Flow control
 	- exclusive range: 0..100
 	- inclusive range: 0..=100
 
+Tests
+-----
+- use #[test] before the test function
+- ignore test: #[ignore]
+
 
 Issues
 -----

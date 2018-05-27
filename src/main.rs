@@ -58,3 +58,14 @@ fn add_fifty(n: i32) -> i32 {
         n + 50
     }
 }
+
+#[test]
+fn test_add_fifty() {
+    assert_eq!(add_fifty(5), 55);
+}
+
+#[ignore]
+#[test]
+fn stupid_test() {
+    assert_eq!(add_fifty(5), 45);
+}
