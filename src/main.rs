@@ -1,6 +1,10 @@
 extern crate simple_server;
+extern crate motivations;
+extern crate pick_one;
 
-use simple_server::Server;
+use simple_server::{Server, Method};
+use motivations::MOTIVATIONS;
+use pick_one::pick_one_str;
 
 /**
  * The amazing website main function.
@@ -11,9 +15,15 @@ fn main() {
 
     let server = Server::new(|request, mut response| {
         println!("Request received! {} {}", request.method(), request.uri());
-        Ok(response.body("Hello Paris!".as_bytes())?)
+
+        match (request.method(), request.uri().path()) {
+            (&Method::GET, "/hello") => Ok(response.body(pick_one_str(&MOTIVATIONS).as_bytes())?),
+            (_, _) => Ok(response.body("404: Page no found".as_bytes())?),
+        }
+        
     });
 
+    println!("Server started at http://{}:{} ...", host, port);
     server.listen(host, port)
 }
 

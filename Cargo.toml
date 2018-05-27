@@ -5,3 +5,5 @@ authors = ["Clara Scherer <git20357@s.cherer.de>"]
 
 [dependencies]
 simple-server = "0.3.0"
+motivations = "1.1.2"
+pick-one = "1.0.1"
