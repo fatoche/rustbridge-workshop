@@ -72,6 +72,18 @@ Error Handling
 - ? operator: lets errors bubble up
 	- can be used on an Option/Result in any function that also returns an Option/Result
 
+Strings
+-------
+- &str = string slice
+	- Referenz
+- String
+	- growable
+	- allocated ?? (Steve: see chapter 4 in the Book)
+	- always owned? ("".to_owned() and "".to_string() have a different history, but now do exactly the same: copy the data from a &str, make a String out of it and take ownership)
+
+Ownership
+--------
+- see slides and intorust.com
 
 Issues
 -----
