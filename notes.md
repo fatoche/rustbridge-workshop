@@ -20,6 +20,7 @@ Types
 - if the compiler cannot determinate the exact type, it errors (only exception: numbers)
 - Strings "some string" vs. Char 'c'
 - size: different lengths, depending on the platform
+- just use the compiler to tell you which types to write in function/variable declarations! (yay, it's not yelling at us, it's helping :D )
 
 Printing
 -------
@@ -27,3 +28,8 @@ Printing
 - first argument: String with {} for arguments, e.g. "Hallo, {}"
 - other arguments: arguments in the order of their curlys -> println!("Hallo, {} and {}!", name_one, name_two)
 - can you use one argument several times? something like println!("first: {0}, second: {1}, first again: {0}", first, second)
+
+Functions
+--------
+- declarations are possible inside other functions
+- the result of the last statement (if it does not end with a semicolon) is automatically returned -> explicit return statement not required (but can be put there)
