@@ -12,7 +12,7 @@ fn main() {
 }
 
 fn add_fifty(n: i32) -> i32 {
-    if n < 35 {
+    if (n < 35) {
         n + 50
     } else {
         n + 50
