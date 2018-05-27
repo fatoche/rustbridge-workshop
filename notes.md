@@ -53,3 +53,8 @@ Flow control
 - for i in blubb {}
 	- exclusive range: 0..100
 	- inclusive range: 0..=100
+
+
+Issues
+-----
+- no error if you forget ; after a println!, you only get the error if you add other statements (not println, not Struct definition) after it

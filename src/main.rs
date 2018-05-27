@@ -27,8 +27,28 @@ fn main() {
     let mut prices = vec![3, 4, 5];
     let goods = vec!["Apple", "Pear", "Banana"];
     for (good, price) in goods.iter().zip(prices.iter()) {
-        println!("A {} costs {} euros.", good, price)
+        println!("A {} costs {} euros.", good, price);
     }
+
+    // structs
+    #[derive(Debug)]
+    struct Dog {
+        name: String,
+        age: u8,
+    }
+
+    let name = "Fuchur".to_string();
+    let age = 7;
+
+    let fuchur = Dog {
+        name,
+        age,
+    };
+    let kyango = Dog {
+        name: "Kyango".to_string(),
+        age: 1,
+    };
+    println!("Fuchur: {:?}, Kyango: {:?}", fuchur, kyango);
 }
 
 fn add_fifty(n: i32) -> i32 {
