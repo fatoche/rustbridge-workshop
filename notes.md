@@ -85,15 +85,6 @@ Ownership
 --------
 - see slides and intorust.com
 
-Website
-------
-- simple_server: easy, good for learning but not for production
-- rocket: not much boilerplate
-- motivations -> there are open issues!
-	- collection of motivational messages
-- pick_one -> picks a random element from an array
-- python: flask -> minimal, easy web framework
-
 Imports
 ------
 1. add dependency in Cargo.toml
@@ -104,3 +95,24 @@ Imports
 Issues
 -----
 - no error if you forget ; after a println!, you only get the error if you add other statements (not println, not Struct definition) after it
+
+
+
+Website
+=======
+
+Crates
+------
+- simple_server: easy, good for learning but not for production
+	- must of the complicated/internal stuff is hidden
+- rocket: not much boilerplate
+- motivations -> there are open issues!
+	- collection of motivational messages
+- pick_one -> picks a random element from an array
+- python: flask -> minimal, easy web framework
+
+Server
+-----
+- new(callback)
+- callback is a closure that takes a request (stuff that we listen to) and an empty response that the server will fill
+- request has a method (GET or POST) and a URI

@@ -6,7 +6,15 @@ use simple_server::Server;
  * The amazing website main function.
  */
 fn main() {
+    let host = "127.0.0.1";
+    let port = "7878";
 
+    let server = Server::new(|request, mut response| {
+        println!("Request received! {} {}", request.method(), request.uri());
+        Ok(response.body("Hello Paris!".as_bytes())?)
+    });
+
+    server.listen(host, port)
 }
 
 /**
