@@ -25,6 +25,7 @@ fn main() {
 
     // Vectors!!!
     let mut prices = vec![3, 4, 5];
+    prices[0] = 2; // apples are on sale ...
     let goods = vec!["Apple", "Pear", "Banana"];
     for (good, price) in goods.iter().zip(prices.iter()) {
         println!("A {} costs {} euros.", good, price);
