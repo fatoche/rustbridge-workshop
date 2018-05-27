@@ -39,7 +39,11 @@ Functions
 --------
 - declarations are possible inside other functions
 - the result of the last statement (if it does not end with a semicolon) is automatically returned -> explicit return statement not required (but can be put there)
+- lambdas: |x| x % 2 == 0
 
 Flow control
 -----------
 - match: exhaustive -> use _ for remaining cases
+- for i in blubb {}
+	- exclusive range: 0..100
+	- inclusive range: 0..=100
