@@ -27,6 +27,12 @@ Types
 		- []-indexing panics with invalid indices
 		- .get() indexing returns None at runtime
 	- Vec<T>: variable size
+	- Tuples
+		- syntax sugar: tuple[2] vs tuple.2
+	- Strings
+		- to_owned, into return String
+		- &str is a reference, there can be only one mutable reference at any time
+		- String is owned
 
 Printing
 -------
