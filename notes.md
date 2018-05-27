@@ -85,6 +85,22 @@ Ownership
 --------
 - see slides and intorust.com
 
+Website
+------
+- simple_server: easy, good for learning but not for production
+- rocket: not much boilerplate
+- motivations -> there are open issues!
+	- collection of motivational messages
+- pick_one -> picks a random element from an array
+- python: flask -> minimal, easy web framework
+
+Imports
+------
+1. add dependency in Cargo.toml
+2. extern crate crate_name;
+3. use crate_name::Struct [as my_struct_name]; OR use crate_name::{Struct1, Struct2};
+
+
 Issues
 -----
 - no error if you forget ; after a println!, you only get the error if you add other statements (not println, not Struct definition) after it

@@ -1,7 +1,18 @@
+extern crate simple_server;
+
+use simple_server::Server;
+
+/**
+ * The amazing website main function.
+ */
+fn main() {
+
+}
+
 /**
  * This is a doc comment.
  */
-fn main() {
+fn learning_main() {
     // this is a comment
     println!("Hello, RustBridge Paris!");
 
